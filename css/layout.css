@@ -22,14 +22,16 @@ margin-top:auto;
 }
 
 .titlename {
-  margin-top:40vh;
+  margin-top: 40vh;
+  width:300px;
+  height:300px;
 }
 
 #Home {
   grid-area: logo;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100vh;
   background-image: url(../img/background.jpg);
