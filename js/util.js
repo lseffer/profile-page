@@ -1,19 +1,19 @@
 window.onscroll = function() {
-  myFunction();
+  navbar_transparent();
 };
 
-function myFunction() {
+function navbar_transparent() {
   if (
     document.body.scrollTop > window.innerHeight - 1 ||
     document.documentElement.scrollTop > window.innerHeight - 1
   ) {
-    document.getElementById("nav").className = "nav solid";
+    document.getElementById("Navigation").className = "nav solid";
   } else {
-    document.getElementById("nav").className = "nav";
+    document.getElementById("Navigation").className = "nav";
   }
 }
 
-document.querySelectorAll('.nav a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function(e) {
     e.preventDefault();
 

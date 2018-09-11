@@ -1,33 +1,89 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Leonard Seffer in brief</title>
-	<link rel="stylesheet" type="text/css" href="./css/reset.css">
-  <link rel="stylesheet" type="text/css" href="./css/layout.css">
-	<link rel="shortcut icon" href="./img/favicon.png" >
-</head>
-<body>
-<div id="nav" class="nav">
-  <ul>
-    <li><a href="#Home">Home</a></li>
-    <li><a href="#About">About</a></li>
-    <li><a href="#Resume">Resume</a></li>
-    <li><a href="#Skills">Skills</a></li>
-  </ul>
-</div>
-<div class="container">
-  <section id="Home">
-    <div class="titlename">
-      <h1>Leonard Seffer</h1>
-      <p>I am dat adscientsist </p>
-      <span>icon 1 2 3</span>
+  <head>
+    <title>Leonard Seffer in brief</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="./css/layout.css">
+    <link rel="shortcut icon" href="./img/favicon.png" >
+  </head>
+  <body>
+    <div id="Navigation">
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Resume">Resume</a></li>
+        <li><a href="#Skills">Skills</a></li>
+      </ul>
     </div>
-      <p class="logo_arrow">One</p>
-  </section>
-  <section id="About"></section>
-  <section id="Resume"></section>
-  <section id="Skills"></section>
-</div>
-  <script type="text/javascript" src="./js/util.js"></script>
-</body>
+    <div class="container">
+      <section id="Home">
+        <div class="titlename">
+          <h1>Leonard Seffer</h1>
+          <p>I'm a Helsinki based <span style="font-weight:bold">Data Scientist</span> interested in web development, deep learning and distributed computing.</p>
+          <ul class="social">
+            <li><a target="_blank" href="https://www.linkedin.com/in/leonard-seffer-data/"><i class="fa fa-linkedin fa-2x"></i></a></li>
+            <li><a target="_blank" href="https://github.com/lseffer"><i class="fa fa-github fa-2x"></i></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/leonard.seffer"><i class="fa fa-facebook fa-2x"></i></a></li>
+          </ul>
+        </div>
+        <a href="#About"><i class="fa fa-chevron-circle-down fa-3x"></i></a>
+      </section>
+      <section id="About">
+        <div class="sidebar">
+          <img src="./img/profilepic.jpg" class="profilepic">
+        </div>
+        <div class="content">
+          <h2>About me</h2>
+          <p>
+            I am a natural problem solver with passion for machine learning, AI, applied statistics and programming. Having an impact is what drives me and is a source for great professional satisfaction.
+            I am a big believer in life-long learning and therefore I actively develop my skills on my free time.
+            Privately I enjoy the simple pleasures of life such as conversing with friends and hanging out with my dog and girlfriend. I like to stay active through floorball practice, gym and long walks with my dog.
+          </p>
+          <h2>Contact Details</h2>
+          <p>Hit me up on LinkedIn or shoot an e-mail: <br>
+            <a href="mailto:leonardseffer@gmail.com">leonardseffer@gmail.com</a></p>
+          </div>
+        </section>
+        <section id="Resume">
+          <div class="resume-item">
+            <div class="sidebar">
+              <div class="sidebarheader">
+                <h2>EXPERIENCE</h2>
+              </div>
+            </div>
+            <div class="content">
+              <h2>Rovio Entertainment Corporation</h2>
+              <p>
+                I have developed, deployed and maintained machine learning / deep learning models in the cloud for use in the business. A big focus early at the company was proactive and reactive analyses of game data and A/B tests. Through these my team helped game teams make better data-driven decisions. I have also automated / migrated a lot of legacy code and models to the cloud. I've built built feature-rich, aggregate database table structures for various games and use cases. I am managing my business unit's automatic job executions and github repository.
+              </p>
+              <h2>IF P&C Insurance</h2>
+              <p>
+                I was responsible for monthly reporting of KPIs and interpretation/presenting of results and implications to senior managers of the business area. I was also tasked with forecasting and planning the portfolio's future performance as well as proposing price actions. I developed new pricing models and validated their success, sometimes in collaboration with other analysts. I created automated reports from different datasources serving multiple stakeholders in the organisation. There was continuous analysis of the portfolio to find areas of improvement. I also did many ad-hoc analyses about customers, premiums and claims.
+              </p>
+            </div>
+          </div>
+          <div class="resume-item">
+            <div class="sidebar">
+              <div class="sidebarheader">
+                <h2>EDUCATION</h2>
+              </div>
+            </div>
+            <div class="content">
+              <h2>Arcada University of Appled Science
+              </h2>
+              <p>
+                Series of courses focused on analyzing, vizualising and modelling big data. In total 25 ECTS. Tools used were Apache Spark, Python, R and D3.js.
+              </p>
+              <h2>Åbo Akademi University</h2>
+              <p>
+                Degree focused on applied mathematics in insurance and finance.
+              </p>
+            </div>
+          </div>
+        </section>
+      <section id="Skills"></section>
+    </div>
+    <script type="text/javascript" src="./js/util.js"></script>
+  </body>
 </html>

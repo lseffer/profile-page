@@ -15,12 +15,18 @@ gulp.task('sass', function () {
 });
 
 gulp.task('css', function() {
-	return gulp.src('./style/css/**/*.css')
+	return gulp.src(['./style/css/**/*.css', './node_modules/font-awesome/css/font-awesome.css'])
 	.pipe(gulp.dest('./css'))
 });
+
+gulp.task('fonts', function() {
+  return gulp.src('./node_modules/font-awesome/fonts/*')
+  .pipe(gulp.dest('./fonts'))
+});
+
 
 gulp.task('sass:watch', function () {
   gulp.watch('./style/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['sass','css']);
+gulp.task('default', ['sass', 'css', 'fonts']);

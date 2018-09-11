@@ -1,7 +1,47 @@
 $theme-dark: #233237;
+$theme-darker: #333333;
 $theme-light: #eae3cf;
 $text-light: #fcfcf8;
-$link-hover-color: #8b0000;
+$text-darkgrey: #7A7A7A;
+$text-babyblue: #00CCCC;
+$text-dark-on-white: #141823;
+$sans-serif: "Source Sans Pro", Helvetica, Verdana, sans-serif;
+$serif: Merriweather, Georgia, "Times New Roman", serif;
+$mono: "Source Code Pro", Courier, mono;
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$content-padding: 40px;
+
+@mixin sm {
+  @media only screen and (max-width:$screen-sm-min) {
+    @content;
+  }
+
+}
+
+// Medium devices
+@mixin md {
+  @media only screen and (max-width:$screen-md-min) {
+    @content;
+  }
+
+}
+
+body {
+  font-family: $sans-serif;
+  font-weight: $light;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+a {
+  color: $text-light;
+  text-decoration: none;
+}
 
 .container {
   display: grid;
@@ -13,7 +53,17 @@ $link-hover-color: #8b0000;
   width: 100%;
   text-align: center;
   min-width: 330px;
+}
 
+.sidebar {
+  display: flex;
+  flex-align: flex-start;
+  justify-content: center;
+  width: calc(30% - $content-padding * 2);
+}
+
+.content {
+  width: calc(70% - $content-padding * 2);
 }
 
 #Home {
@@ -29,23 +79,197 @@ $link-hover-color: #8b0000;
   background-size: cover;
   min-width: 330px;
 
+  & .social {
+    list-style-type: none;
+
+    li {
+      display: inline;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+  }
+
+  & .fa-chevron-circle-down {
+    margin-bottom: $content-padding;
+  }
+
+  & .fa {
+    transition-property: color;
+    transition-duration: 1s;
+  }
+
+  & .fa:hover {
+    color: $text-babyblue;
+  }
+
+  & h1 {
+    font-size: 350%;
+    color: $text-light;
+    text-shadow: 1px 1px 5px black;
+    margin-bottom: 20px;
+  }
+
+  & p {
+    color: $text-light;
+    text-shadow: 1px 1px 5px black;
+    font-size: 120%;
+    margin-bottom: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  & i {
+    color: $text-light;
+  }
+
   .logo_arrow {
     margin-top: auto;
   }
 
   .titlename {
     margin-top: 40vh;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
   }
 
 }
 
 #About {
-  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  background-color: $theme-dark;
+  padding: $content-padding;
+
+  @include md {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 20vw;
+  }
+
+  .profilepic {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+
+    @include md {
+      margin: 0px;
+    }
+
+  }
+
+  .content {
+    margin-left: $content-padding;
+
+    @include md {
+      margin-top: 30px;
+    }
+
+    h2 {
+      text-align: left;
+      color: $text-light;
+      font-size: 200%;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 5px black;
+
+      @include md {
+        max-width: 400px;
+      }
+
+    }
+
+    p {
+      text-align: justify;
+      color: $text-darkgrey;
+      margin-bottom: 20px;
+      max-width: 700px;
+
+      @include md {
+        max-width: 400px;
+      }
+
+    }
+
+    a {
+      color: $text-light;
+    }
+
+  }
+
 }
 
-.nav {
+#Resume {
+  display: flex;
+  flex-direction: column;
+  padding: $content-padding;
+  color: $text-dark-on-white;
+}
+
+.resume-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: white;
+
+  @include md {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 20vw;
+  }
+
+  .sidebar h2 {
+    font-size: 120%;
+    font-weight: $bold;
+    border-bottom: 5px solid;
+    border-bottom-color: $text-babyblue;
+  }
+
+  .content {
+    margin-left: $content-padding;
+
+    @include md {
+      margin-top: 30px;
+    }
+
+    h2 {
+      text-align: left;
+      font-size: 150%;
+      margin-bottom: 20px;
+      font-weight: $bold;
+
+      @include md {
+        max-width: 400px;
+      }
+
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 20px;
+      max-width: 700px;
+
+      @include md {
+        max-width: 400px;
+      }
+
+    }
+
+  }
+
+}
+
+#Navigation {
   width: 100%;
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0);
@@ -55,22 +279,20 @@ $link-hover-color: #8b0000;
   transition-duration: 1s;
 
   & a {
-    color: $text-light;
-    text-decoration: none;
     transition-property: color;
     transition-duration: 1s;
   }
 
   & a:active {
-    color: $link-hover-color;
+    color: $text-babyblue;
   }
 
   & a:hover {
-    color: $link-hover-color;
+    color: $text-babyblue;
   }
 
   &.solid {
-    background-color: black;
+    background-color: $theme-darker;
   }
 
   & > ul {
