@@ -150,11 +150,8 @@ a {
     align-items: center;
   }
 
-  .sidebar {
-    width: 20vw;
-  }
-
   .profilepic {
+    margin-left: auto;
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -224,8 +221,8 @@ a {
     align-items: center;
   }
 
-  .sidebar {
-    width: 20vw;
+  .sidebarheader {
+    margin-left: auto;
   }
 
   .sidebar h2 {
