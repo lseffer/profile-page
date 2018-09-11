@@ -1,0 +1,62 @@
+@function circular-progress($maxPercent, $percent, $color-bar, $color-back) {
+
+  $increment: 360 / $maxPercent;
+  $half: round($maxPercent / 2);
+  $background-image: '';
+
+  @if $percent < $half {
+    $nextdeg: 90deg +  ($increment * $percent);
+
+    $background-image: 'linear-gradient(90deg, #{$color-back} 50%, transparent 50%, transparent),
+    linear-gradient(#{$nextdeg}, #{$color-bar} 50%, #{$color-back} 50%, #{$color-back})';
+
+  } @else {
+      $nextdeg: -90deg + ($increment * ($percent - $half));
+
+      $background-image: 'linear-gradient(#{$nextdeg}, #{$color-bar} 50%, transparent 50%, transparent),
+      linear-gradient(270deg, #{$color-bar} 50%, #{$color-back} 50%, #{$color-back})';
+    }
+  @return unquote($background-image);
+}
+
+$percent-to-show:45;
+
+.circular-progress {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  //circular-progress function
+  //circular-progress($maxPercent, $percent, $color-bar, $color-back);
+  background: circular-progress(100, $percent-to-show, #03A9F4, #E0E0E0);
+  
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  height: 100px;
+  margin: 2em auto;
+  position: relative;
+  width: 100px;
+  transition: all .3s linear;
+
+  i {
+    color:black;
+    z-index:100;
+  }
+  
+  &::before {
+    background-color: #FAFAFA;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: rgba(black,.54);
+    content: '';
+    font-size: 72px;
+    font-weight: bold;
+    height: 100%;
+    left: 0;
+    line-height: 200px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transform: scale(.87);
+    width: 100%;
+  }
+}

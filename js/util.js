@@ -4,8 +4,8 @@ window.onscroll = function() {
 
 function navbar_transparent() {
   if (
-    document.body.scrollTop > window.innerHeight - 1 ||
-    document.documentElement.scrollTop > window.innerHeight - 1
+    document.body.scrollTop > window.innerHeight ||
+    document.documentElement.scrollTop > window.innerHeight
   ) {
     document.getElementById("Navigation").className = "nav solid";
   } else {

@@ -14,7 +14,7 @@ $semibold: 500;
 $bold: 700;
 $screen-sm-min: 576px;
 $screen-md-min: 768px;
-$content-padding: 40px;
+$content-padding: 60px;
 
 @mixin sm {
   @media only screen and (max-width:$screen-sm-min) {
@@ -59,11 +59,6 @@ a {
   display: flex;
   flex-align: flex-start;
   justify-content: center;
-  width: calc(30% - $content-padding * 2);
-}
-
-.content {
-  width: calc(70% - $content-padding * 2);
 }
 
 #Home {
@@ -167,6 +162,7 @@ a {
 
     @include md {
       margin-top: 30px;
+      margin-left: 0;
     }
 
     h2 {
@@ -237,6 +233,7 @@ a {
 
     @include md {
       margin-top: 30px;
+      margin-left: 0;
     }
 
     h2 {
@@ -260,6 +257,91 @@ a {
         max-width: 400px;
       }
 
+    }
+
+  }
+
+}
+
+#Skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: $theme-dark;
+  padding: $content-padding;
+  color: $text-light;
+
+  @include md {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circular-progress {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .sidebarheader {
+    margin-left: auto;
+  }
+
+  .sidebar h2 {
+    font-size: 120%;
+    font-weight: $bold;
+    border-bottom: 5px solid;
+    border-bottom-color: $text-babyblue;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: $content-padding;
+
+    .progress-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include md {
+      margin-top: 30px;
+      max-width: 400px;
+      margin-left: 0;
+    }
+
+    h2 {
+      text-align: left;
+      color: $text-light;
+      font-size: 200%;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 5px black;
+
+      @include md {
+        max-width: 400px;
+      }
+
+    }
+
+    p {
+      text-align: justify;
+      color: $text-darkgrey;
+      margin-bottom: 20px;
+      max-width: 700px;
+
+      @include md {
+        max-width: 400px;
+      }
+
+    }
+
+    a {
+      color: $text-light;
     }
 
   }
