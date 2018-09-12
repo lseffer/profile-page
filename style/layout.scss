@@ -134,7 +134,7 @@ a {
   grid-area: logo;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: 100vh;
   background-image: url(../img/background.jpg);
@@ -144,9 +144,10 @@ a {
   min-width: 330px;
   text-align: center;
 
-  & .social {
+  .social {
     list-style-type: none;
-    margin-bottom:20px;
+    margin-bottom: 20px;
+
     li {
       display: inline;
       margin-right: 5px;
@@ -155,55 +156,55 @@ a {
 
   }
 
-  & .fa-chevron-circle-down {
+  .fa-chevron-circle-down {
     margin-bottom: $content-padding;
 
     @include md {
-      margin-bottom: calc(#{$content-padding} / 3);
+      margin-bottom:calc(#{$content-padding}/ 3);
     }
+
   }
 
-  & .fa {
+  .fa {
     transition-property: color;
     transition-duration: 1s;
   }
 
-  & .fa:hover {
+  .fa:hover {
     color: $text-babyblue;
   }
 
-  & h1 {
-    font-size: 350%;
+  h1 {
+    font-size: 12vw;
     color: $text-light;
     text-shadow: 1px 1px 5px black;
     margin-bottom: 20px;
   }
 
-  & p {
+  p {
     color: $text-light;
     text-shadow: 1px 1px 5px black;
-    font-size: 120%;
+    font-size: 4vw;
     margin-bottom: 20px;
-    max-width: 400px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 
     @include md {
-      font-size:100%;
-        max-width: 300px;
+      max-width: 300px;
     }
+
   }
 
-  & i {
+  i {
     color: $text-light;
   }
 
-  .logo_arrow {
-    margin-top: auto;
-  }
-
   .titlename {
-    margin-top: 30vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
   }
