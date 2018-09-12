@@ -49,6 +49,7 @@ a {
   justify-content: space-between;
   align-content: flex-end;
   flex-wrap: wrap;
+  text-align:left;
 }
 
 .container {
@@ -116,7 +117,7 @@ a {
     }
 
     p {
-      text-align: justify;
+      text-align: left;
       margin-bottom: 20px;
       max-width: 700px;
 
@@ -272,7 +273,7 @@ a {
 
     p {
       text-align: justify;
-      word-spacing:-2px;
+    
       color: $text-darkgrey;
       margin-bottom: 20px;
 
@@ -347,7 +348,7 @@ a {
 
     p {
       text-align: justify;
-      word-spacing:-2px;
+    
       margin-bottom: 20px;
 
       @include md {
