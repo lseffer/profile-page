@@ -176,6 +176,7 @@ a {
 
   h1 {
     font-size: 12vw;
+    font-weight:$bold;
     color: $text-light;
     text-shadow: 1px 1px 5px black;
     margin-bottom: 20px;
@@ -271,6 +272,7 @@ a {
 
     p {
       text-align: justify;
+      word-spacing:-2px;
       color: $text-darkgrey;
       margin-bottom: 20px;
 
@@ -345,6 +347,7 @@ a {
 
     p {
       text-align: justify;
+      word-spacing:-2px;
       margin-bottom: 20px;
 
       @include md {
@@ -396,6 +399,7 @@ a {
     max-width: 700px;
 
     .progress-container {
+      text-align:center;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
