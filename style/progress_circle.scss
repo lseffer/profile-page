@@ -20,26 +20,28 @@
 }
 
 $percent-to-show:45;
+$text-babyblue-dark: #017f7f;
 
-.circular-progress {
+%circular-progress {
   display:flex;
   justify-content:center;
   align-items:center;
   //circular-progress function
   //circular-progress($maxPercent, $percent, $color-bar, $color-back);
-  background: circular-progress(100, $percent-to-show, #03A9F4, #E0E0E0);
+  //background: circular-progress(100, $percent-to-show, #03A9F4, #E0E0E0);
   
   border-radius: 50%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  height: 100px;
+  height: 120px;
   margin: 2em auto;
   position: relative;
-  width: 100px;
+  width: 120px;
   transition: all .3s linear;
 
-  i {
+  span {
     color:black;
     z-index:100;
+    font-weight:bold;
   }
   
   &::before {
@@ -59,4 +61,35 @@ $percent-to-show:45;
     transform: scale(.87);
     width: 100%;
   }
+}
+
+.circular-progress-100 {
+    @extend %circular-progress;
+    background: circular-progress(100, 100, $text-babyblue-dark, #E0E0E0);
+
+}
+
+.circular-progress-90 {
+    @extend %circular-progress;
+    background: circular-progress(100, 90, $text-babyblue-dark, #E0E0E0);
+
+}
+
+.circular-progress-60 {
+    @extend %circular-progress;
+    background: circular-progress(100, 60, $text-babyblue-dark, #E0E0E0);
+
+}
+
+.circular-progress-50 {
+    @extend %circular-progress;
+    background: circular-progress(100, 50, $text-babyblue-dark, #E0E0E0);
+
+}
+
+
+.circular-progress-40 {
+    @extend %circular-progress;
+    background: circular-progress(100, 40, $text-babyblue-dark, #E0E0E0);
+
 }

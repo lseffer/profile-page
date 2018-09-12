@@ -43,6 +43,14 @@ a {
   text-decoration: none;
 }
 
+.work-time-paragraph {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-end;
+  flex-wrap: wrap;
+}
+
 .container {
   display: grid;
   grid-template-areas: "logo"
@@ -59,6 +67,68 @@ a {
   display: flex;
   flex-align: flex-start;
   justify-content: center;
+  min-width: 150px;
+}
+
+%section-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @include md {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebarheader {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sidebar {
+    h2 {
+      font-size: 120%;
+      font-weight: $bold;
+      border-bottom: 5px solid;
+      border-bottom-color: $text-babyblue;
+    }
+
+  }
+
+  .content {
+    margin-left: $content-padding;
+
+    @include md {
+      margin-top: 30px;
+      margin-left: 0;
+    }
+
+    h2 {
+      text-align: left;
+      font-size: 150%;
+      margin-bottom: 20px;
+      font-weight: $bold;
+
+      @include md {
+        max-width: 400px;
+      }
+
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 20px;
+      max-width: 700px;
+
+      @include md {
+        max-width: 400px;
+      }
+
+    }
+
+  }
+
 }
 
 #Home {
@@ -134,7 +204,6 @@ a {
 #About {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
   justify-content: center;
   background-color: $theme-dark;
   padding: $content-padding;
@@ -147,6 +216,7 @@ a {
 
   .profilepic {
     margin-left: auto;
+    margin-right: auto;
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -159,6 +229,7 @@ a {
 
   .content {
     margin-left: $content-padding;
+    max-width: 700px;
 
     @include md {
       margin-top: 30px;
@@ -182,7 +253,6 @@ a {
       text-align: justify;
       color: $text-darkgrey;
       margin-bottom: 20px;
-      max-width: 700px;
 
       @include md {
         max-width: 400px;
@@ -219,17 +289,22 @@ a {
 
   .sidebarheader {
     margin-left: auto;
+    margin-right: auto;
   }
 
-  .sidebar h2 {
-    font-size: 120%;
-    font-weight: $bold;
-    border-bottom: 5px solid;
-    border-bottom-color: $text-babyblue;
+  .sidebar {
+    h2 {
+      font-size: 120%;
+      font-weight: $bold;
+      border-bottom: 5px solid;
+      border-bottom-color: $text-babyblue;
+    }
+
   }
 
   .content {
     margin-left: $content-padding;
+    max-width: 700px;
 
     @include md {
       margin-top: 30px;
@@ -251,7 +326,6 @@ a {
     p {
       text-align: justify;
       margin-bottom: 20px;
-      max-width: 700px;
 
       @include md {
         max-width: 400px;
@@ -277,20 +351,19 @@ a {
     align-items: center;
   }
 
-  .circular-progress {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
   .sidebarheader {
     margin-left: auto;
+    margin-right: auto;
   }
 
-  .sidebar h2 {
-    font-size: 120%;
-    font-weight: $bold;
-    border-bottom: 5px solid;
-    border-bottom-color: $text-babyblue;
+  .sidebar {
+    h2 {
+      font-size: 120%;
+      font-weight: $bold;
+      border-bottom: 5px solid;
+      border-bottom-color: $text-babyblue;
+    }
+
   }
 
   .content {
@@ -300,13 +373,15 @@ a {
     justify-content: center;
     align-items: center;
     margin-left: $content-padding;
+    max-width: 700px;
 
     .progress-container {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
+      width: 100%;
     }
 
     @include md {
@@ -374,7 +449,7 @@ a {
     background-color: $theme-darker;
   }
 
-  & > ul {
+  .normal-nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -382,10 +457,11 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-  }
 
-  & li {
-    padding: 16px 14px;
+    li {
+      padding: 16px 14px;
+    }
+
   }
 
 }
