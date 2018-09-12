@@ -12,12 +12,12 @@ $light: 300;
 $normal: 400;
 $semibold: 500;
 $bold: 700;
-$screen-sm-min: 576px;
+$screen-bg-min: 600px;
 $screen-md-min: 768px;
 $content-padding: 60px;
 
-@mixin sm {
-  @media only screen and (max-width:$screen-sm-min) {
+@mixin bg {
+  @media only screen and (min-width:$screen-bg-min) {
     @content;
   }
 
@@ -179,6 +179,12 @@ a {
     color: $text-light;
     text-shadow: 1px 1px 5px black;
     margin-bottom: 20px;
+    max-width: 700px;
+
+@include bg {
+  font-size: 72px;
+}
+
   }
 
   p {
@@ -186,9 +192,13 @@ a {
     text-shadow: 1px 1px 5px black;
     font-size: 4vw;
     margin-bottom: 20px;
-    max-width: 700px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+
+    @include bg {
+  font-size: 24px;
+}
 
     @include md {
       max-width: 300px;
