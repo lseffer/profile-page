@@ -15,6 +15,7 @@ $bold: 700;
 $screen-bg-min: 600px;
 $screen-md-min: 768px;
 $content-padding: 60px;
+$content-padding-md: 30px;
 
 @mixin bg {
   @media only screen and (min-width:$screen-bg-min) {
@@ -242,6 +243,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: $content-padding-md;
   }
 
   .profilepic {
@@ -275,6 +277,7 @@ a {
 
       @include md {
         max-width: 400px;
+        text-align: center;
       }
 
     }
@@ -304,6 +307,9 @@ a {
   flex-direction: column;
   padding: $content-padding;
   color: $text-dark-on-white;
+  @include md {
+    padding: $content-padding-md;
+  }
 }
 
 .resume-item {
@@ -350,6 +356,7 @@ a {
 
       @include md {
         max-width: 400px;
+        text-align: center;
       }
 
     }
@@ -381,6 +388,10 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: $content-padding-md;
+    h2 {
+      text-align: center;
+    }
   }
 
   .sidebarheader {
