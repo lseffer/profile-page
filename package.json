@@ -19,6 +19,7 @@
     "gulp-sass": "^4.0.1"
   },
   "dependencies": {
+    "natives": "^1.1.6",
     "typeface-ubuntu": "0.0.54"
   }
 }
