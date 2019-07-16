@@ -471,6 +471,9 @@ a {
       justify-content: left;
       align-items: center;
       width: 700px;
+      @include md {
+        width: 400px;
+      }
     }
 
     .boxlink {
