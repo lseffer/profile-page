@@ -74,7 +74,6 @@ a {
 
 .sidebar {
   display: flex;
-  flex-align: flex-start;
   justify-content: center;
   min-width: 150px;
 }
@@ -464,6 +463,75 @@ a {
     }
 
   }
+
+}
+
+#Projects {
+    @extend #Skills;
+    color: $text-dark-on-white;
+    background-color: #ffffff;
+
+    .content {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: start;
+            margin-left: $content-padding;
+            max-width: 700px;
+
+            @include md {
+                margin-top: 30px;
+                max-width: 400px;
+                margin-left: 0;
+              }
+
+    p {
+                color: $text-dark-on-white;
+            }
+
+    .boxlinks {
+        text-align:center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+        width: 700px;
+    }
+
+    .boxlink {
+        width: 300px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        transition-property: box-shadow;
+        transition-duration: 1s;
+        .preview_img {
+            height: auto;
+            display: block;
+            width: 100%;
+            z-index: -1;
+        }
+        .preview {
+            box-shadow: 0px 0px 10px 0px $theme-dark;
+        }
+    }
+
+    .boxlink:hover {
+        box-shadow: 0px 0px 30px 0px $theme-dark;
+    }
+
+    a {
+        color: $text-dark-on-white;
+        transition-property: color;
+        transition-duration: 1s;
+      }
+
+      a:hover {
+        color: $text-babyblue;
+      }
+
+}
 
 }
 
