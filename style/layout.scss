@@ -473,6 +473,7 @@ a {
       width: 700px;
       @include md {
         width: 400px;
+        justify-content: center;
       }
     }
 
@@ -483,6 +484,7 @@ a {
       transition-property: box-shadow;
       transition-duration: 1s;
       .preview_img {
+        filter: blur(0.5px);
         height: auto;
         display: block;
         width: 100%;
