@@ -16,13 +16,12 @@
   "author": "Leonard Seffer",
   "license": "ISC",
   "devDependencies": {
-    "font-awesome": "^4.7.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-sass": "^4.0.2"
+    "font-awesome": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-sass": "latest"
   },
   "dependencies": {
-    "natives": "^1.1.6",
-    "typeface-ubuntu": "0.0.54"
+    "typeface-ubuntu": "latest"
   }
 }
