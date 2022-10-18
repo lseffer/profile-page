@@ -17,11 +17,12 @@
   "license": "ISC",
   "devDependencies": {
     "font-awesome": "latest",
-    "gulp": "latest",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "latest",
     "gulp-sass": "latest"
   },
   "dependencies": {
+    "sass": "^1.55.0",
     "typeface-ubuntu": "latest"
   }
 }
